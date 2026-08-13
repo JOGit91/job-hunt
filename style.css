@@ -134,35 +134,9 @@ nav {
   background: rgba(15, 23, 42, 0.8);
 }
 
-/* Reminder card — full width, above main grid */
-.reminder-card {
-  background: var(--card-bg);
-  border-radius: var(--radius-lg);
-  padding: 22px 28px;
+/* Full-width card above main grid */
+.full-width-card {
   margin-bottom: 24px;
-  border: 1px solid rgba(249, 115, 22, 0.3);
-  box-shadow: var(--shadow-soft);
-  position: relative;
-  overflow: hidden;
-}
-
-.reminder-card::before {
-  content: "";
-  position: absolute;
-  inset: -40%;
-  background: radial-gradient(circle at 50% 50%, rgba(249, 115, 22, 0.08), transparent 65%);
-  pointer-events: none;
-}
-
-.reminder-card .card-inner {
-  position: relative;
-  z-index: 1;
-}
-
-.reminder-card p {
-  font-size: 0.93rem;
-  line-height: 1.8;
-  color: #e5e7eb;
 }
 
 /* Main grid */
