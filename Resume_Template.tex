@@ -1,0 +1,177 @@
+%-------------------------
+% Resume Template in LaTeX
+% Single-column, ATS-friendly template
+% License : MIT
+%
+% HOW TO USE
+% - Fill in the bracketed [placeholder] text throughout.
+% - \resumeSubheading{Company}{Location}{Title}{Dates} starts a job entry.
+%   Follow it with \resumeItemListStart ... \resumeItemListEnd containing
+%   one \resumeItem{...} per bullet.
+% - If you were promoted within the same company, use \resumeSubheading
+%   for the most recent title, then a plain \resumeSubSubheading{Title}{Dates}
+%   for the earlier title underneath it (no company/location repeated),
+%   each with its own \resumeItemListStart/End block of bullets.
+% - \resumeProjectHeading works the same way for the Projects section.
+% - Compile with: pdflatex resume_template.tex
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting: small-caps heading with a rule underneath
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensures PDF text is copy/paste and ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands -- do not edit below this line
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+%-------------------------
+
+\begin{document}
+
+%---------- HEADER ----------
+\begin{center}
+    \textbf{\Huge \scshape [Your Name]} \\ \vspace{1pt}
+    \small [Phone Number] $|$ \href{mailto:[you@email.com]}{\underline{[you@email.com]}} $|$
+    \href{https://www.linkedin.com/in/[your-linkedin]}{\underline{linkedin.com/in/[your-linkedin]}} $|$
+    \href{https://[your-portfolio-site]}{\underline{[your-portfolio-site]}} \\
+    \vspace{2pt}
+    \small \textit{[Certification 1] $\cdot$ [Certification 2] $\cdot$ [Certification 3]}
+\end{center}
+
+%---------- SUMMARY (optional -- delete this section if you'd rather not use one) ----------
+\section{Summary}
+\vspace{2pt}
+\small{[2--4 sentence summary: who you are professionally, your core expertise, a quantified highlight or two, and what kind of role/impact you're looking for. Keep it tight -- this is the one part of the resume written in first person.]}
+\vspace{-6pt}
+
+%---------- EXPERIENCE ----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    % --- Example: a role where you were promoted within the same company ---
+    \resumeSubheading
+      {[Company Name]}{[City, State / Remote]}
+      {[Most Recent Title]}{[Start Date] -- [End Date / Present]}
+      \resumeItemListStart
+        \resumeItem{[Bullet: lead with a strong action verb, describe what you did, and quantify the result wherever possible -- e.g. "Owned X end-to-end, resulting in Y\% improvement in Z."]}
+        \resumeItem{[Bullet 2 -- another concrete accomplishment with a measurable outcome.]}
+        \resumeItem{[Bullet 3 -- vary the type of accomplishment: technical build, process improvement, cross-functional collaboration, etc.]}
+      \resumeItemListEnd
+
+    \resumeSubSubheading
+      {[Earlier Title at Same Company]}{[Start Date] -- [End Date]}
+      \resumeItemListStart
+        \resumeItem{[Bullet describing a core responsibility or accomplishment in this earlier role.]}
+        \resumeItem{[Bullet 2.]}
+      \resumeItemListEnd
+
+    % --- Example: a standard single-title role ---
+    \resumeSubheading
+      {[Previous Company Name]}{[City, State]}
+      {[Job Title]}{[Start Date] -- [End Date]}
+      \resumeItemListStart
+        \resumeItem{[Bullet describing scope and impact in this role.]}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%---------- TECHNICAL SKILLS ----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{[Skill Category 1]}{: [Tool/skill, tool/skill, tool/skill]} \\
+     \textbf{[Skill Category 2]}{: [Tool/skill, tool/skill, tool/skill]} \\
+     \textbf{[Skill Category 3]}{: [Tool/skill, tool/skill, tool/skill]} \\
+     \textbf{[Skill Category 4]}{: [Tool/skill, tool/skill, tool/skill]} \\
+     \textbf{Languages, Data \& Platforms}{: [Language, tool, tool, tool]}
+    }}
+ \end{itemize}
+
+%---------- PROJECTS (optional) ----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{[Project Name]} $|$ \emph{[Tech Stack Used]}}{[Date / Date Range]}
+          \resumeItemListStart
+            \resumeItem{[One or two sentences describing what the project does, why you built it, and any measurable outcome.]}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%---------- EDUCATION ----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {[School Name]}{[City, State]}
+      {[Degree \& Major]}{[Start Year] -- [End Year]}
+  \resumeSubHeadingListEnd
+
+\end{document}

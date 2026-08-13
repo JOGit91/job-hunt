@@ -1,0 +1,154 @@
+%-------------------------
+% Resume Template in LaTeX -- FILLED-IN SAMPLE
+% Same structure as Resume_Template.tex, populated with fictional
+% sample data so you can see how each piece renders.
+% License : MIT
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Jordan Rivera} \\ \vspace{1pt}
+    \small (555) 234-7810 $|$ \href{mailto:jordan.rivera@email.com}{\underline{jordan.rivera@email.com}} $|$
+    \href{https://www.linkedin.com/in/jordan-rivera}{\underline{linkedin.com/in/jordan-rivera}} $|$
+    \href{https://jordanrivera.dev}{\underline{jordanrivera.dev}} \\
+    \vspace{2pt}
+    \small \textit{AWS Certified Developer $\cdot$ CKA $\cdot$ Scrum Master}
+\end{center}
+
+\section{Summary}
+\vspace{2pt}
+\small{Backend-focused software engineer with 6+ years building and scaling distributed systems, the last 3 leading a small platform team. I like taking ambiguous problems, breaking them into shippable pieces, and building the infrastructure that lets other engineers move faster. Recent focus has been on cutting infrastructure cost and improving reliability without slowing down the team's release pace.}
+\vspace{-6pt}
+
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Nimbus Analytics}{Remote}
+      {Senior Software Engineer, Platform Lead}{June 2023 -- Present}
+      \resumeItemListStart
+        \resumeItem{Promoted from Senior Engineer to Platform Lead; mentor a team of 4 engineers through code review, pairing, and quarterly goal-setting while continuing to ship production code myself.}
+        \resumeItem{Led the migration of our monolith's billing module to a standalone service, cutting average deploy time from 40 minutes to 6 and reducing billing-related incidents by 60\% in the following two quarters.}
+        \resumeItem{Owned the platform team's infrastructure cost initiative, right-sizing compute and consolidating redundant services to reduce monthly AWS spend by 28\% without any customer-facing downtime.}
+        \resumeItem{Built internal tooling in Go and Terraform to automate environment provisioning, cutting new-service setup time from two days to under an hour for the rest of engineering.}
+      \resumeItemListEnd
+
+    \resumeSubSubheading
+      {Software Engineer}{August 2021 -- June 2023}
+      \resumeItemListStart
+        \resumeItem{Designed and built the notifications service handling 2M+ daily events across email, SMS, and push, with a retry and dead-letter queue system that brought delivery failure rates under 0.1\%.}
+        \resumeItem{Partnered with the data team to instrument key product events, enabling the first reliable funnel analytics the company had for its onboarding flow.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {BrightPath Software}{Austin, TX}
+      {Software Engineer}{July 2019 -- August 2021}
+      \resumeItemListStart
+        \resumeItem{Built and maintained REST APIs serving BrightPath's core scheduling product, supporting roughly 15,000 daily active users across web and mobile clients.}
+        \resumeItem{Rewrote the legacy search feature using Elasticsearch, reducing average query latency from 900ms to 80ms and improving relevance ranking based on user click-through data.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Backend \& APIs}{: Go, Python, Node.js, REST, gRPC, GraphQL} \\
+     \textbf{Infrastructure \& Cloud}{: AWS (EC2, Lambda, RDS, S3), Terraform, Docker, Kubernetes} \\
+     \textbf{Data \& Messaging}{: PostgreSQL, Redis, Kafka, Elasticsearch} \\
+     \textbf{Practices \& Tooling}{: CI/CD (GitHub Actions), Observability (Datadog, Grafana), Code Review, Agile/Scrum} \\
+     \textbf{Languages, Data \& Platforms}{: Go, Python, SQL, Bash, GitHub, Linux}
+    }}
+ \end{itemize}
+
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Routewise} $|$ \emph{Go, Postgres, React}}{2025 -- Present}
+          \resumeItemListStart
+            \resumeItem{Side project for optimizing multi-stop delivery routes; built the route-scoring engine in Go and a lightweight React frontend for visualizing results, used by two small local delivery businesses.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Texas at Austin}{Austin, TX}
+      {B.S. in Computer Science}{2015 -- 2019}
+  \resumeSubHeadingListEnd
+
+\end{document}
